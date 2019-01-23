@@ -1,26 +1,44 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 class App extends Component {
+  state = {
+    loginClicked: false,
+    isAuthenticated: false
+  };
+
+  handleLoginClick = () => {
+    console.log(this.state.loginClicked);
+
+    this.setState({
+      loginClicked: !this.state.loginClicked
+    });
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar
+            handleLoginClick={this.handleLoginClick}
+            loginClicked={this.state.loginClicked}
+            isAuthenticated={this.state.isAuthenticated}
+          />
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <Home
+                loginClicked={this.state.loginClicked}
+                {...props}
+                isAuthenticated={this.state.isAuthenticated}
+              />
+            )}
+          />
+        </div>
+      </BrowserRouter>
     );
   }
 }

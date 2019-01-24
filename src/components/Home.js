@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import UserProfile from "./UserProfile";
 import UserLogin from "./UserLogin";
 
-export default class Home extends Component {
+class Home extends Component {
   render() {
     let landingContent;
 
@@ -14,23 +14,17 @@ export default class Home extends Component {
     } else if (this.props.loginClicked) {
       landingContent = (
         <div className="login">
-          <slogan>
-            <span>build</span>
-            <span>something</span>
-            <span>awesome</span>
-          </slogan>
-
           <UserLogin />
+          <loginButton>
+            <Link to="/signup">
+              <input type="button" value="Login" />
+            </Link>
+          </loginButton>
         </div>
       );
     } else {
       landingContent = (
         <div className="landing-content">
-          <slogan>
-            <span>build</span>
-            <span>something</span>
-            <span>awesome</span>
-          </slogan>
           <description>
             <p>
               <span>Project Unicorn</span> is an online community focused on{" "}
@@ -50,7 +44,14 @@ export default class Home extends Component {
 
     return (
       <landingContainer>
-        <mainLanding>{landingContent}</mainLanding>
+        <mainLanding>
+          <slogan>
+            <span>build</span>
+            <span>something</span>
+            <span>awesome</span>
+          </slogan>
+          {landingContent}
+        </mainLanding>
         <landingStats>
           <div className="row">
             <div className="col-xs-4">2</div>
@@ -133,3 +134,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default Home;

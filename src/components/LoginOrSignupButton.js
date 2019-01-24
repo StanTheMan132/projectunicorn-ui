@@ -6,16 +6,12 @@ const LoginOrSignupButton = ({
   isAuthenticated
 }) => {
   let loginOrSignupButton;
-  let buttonText = loginClicked ? "Sign Up" : "Login";
+  let buttonText = loginClicked ? "sign up" : "login";
 
   loginOrSignupButton = isAuthenticated ? null : (
-    <ul className="navbar-nav ml-auto">
-      <navItems>
-        <li className="">
-          <loginButton onClick={handleLoginClick}>{buttonText}</loginButton>
-        </li>
-      </navItems>
-    </ul>
+      <navPrompt>
+          <loginPrompt onClick={handleLoginClick}>{buttonText}</loginPrompt>
+      </navPrompt>
   );
 
   return loginOrSignupButton;

@@ -19,7 +19,8 @@ const Navbar = ({ handleLoginClick, loginClicked, isAuthenticated }) => {
         <Link className="navbar-brand" to="/">
           <Logo />
         </Link>
-
+        <div className ='navbar-menu-items'>
+        {loginOrSignupButton}
         <button
           className="navbar-toggler"
           type="button"
@@ -31,7 +32,7 @@ const Navbar = ({ handleLoginClick, loginClicked, isAuthenticated }) => {
         >
           <span className="navbar-toggler-icon" />
         </button>
-
+        </div>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <navItems>
@@ -53,8 +54,6 @@ const Navbar = ({ handleLoginClick, loginClicked, isAuthenticated }) => {
             </navItems>
           </ul>
         </div>
-
-        {loginOrSignupButton}
       </nav>
     </header>
   );

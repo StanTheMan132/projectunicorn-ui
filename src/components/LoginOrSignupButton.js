@@ -9,9 +9,9 @@ const LoginOrSignupButton = ({
   let buttonText = loginClicked ? "sign up" : "login";
 
   loginOrSignupButton = isAuthenticated ? null : (
-      <navPrompt>
-          <loginPrompt onClick={handleLoginClick}>{buttonText}</loginPrompt>
-      </navPrompt>
+    <navPrompt>
+      <loginPrompt onClick={handleLoginClick}>{buttonText}</loginPrompt>
+    </navPrompt>
   );
 
   return loginOrSignupButton;

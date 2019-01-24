@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+a {
+  outline: none !important;
+}
+
+signupButton a {
+  color: transparent !important;
+}
+
+input[type="button"]:hover,
+button:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+input[type="button"]:active,
+button:active {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16) inset;
+}

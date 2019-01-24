@@ -45,25 +45,34 @@ class Home extends Component {
     return (
       <landingContainer>
         <mainLanding>
-          <slogan>
+          <slogan className="slogan-mobile">
             <span>build</span>
             <span>something</span>
             <span>awesome</span>
           </slogan>
+          <slogan className="slogan-desktop">
+            <span>build something</span>
+            <span>awesome</span>
+          </slogan>
+
           {landingContent}
         </mainLanding>
         <landingStats>
-          <div className="row">
-            <div className="col-xs-4">2</div>
-            <div className="col-xs-4">6</div>
-            <div className="col-xs-4">47</div>
+          <div className="stat">
+            <i className="fa fa-users fa-3x" />
+            <span className="stat-number">87</span>
+            <span>users</span>
           </div>
-          <div className="row">
-            <div className="col-xs-4">projects</div>
-            <div className="col-xs-4">commits</div>
-            <div className="col-xs-4">users</div>
+          <div className="stat">
+            <i className="fa fa-project-diagram fa-3x" />
+            <span className="stat-number">9</span>
+            <span>projects</span>
           </div>
-          users
+          <div className="stat">
+            <i className="fa fa-code-branch fa-3x" />
+            <span className="stat-number">23</span>
+            <span>commits</span>
+          </div>
         </landingStats>
         <bubbleOne />
         <bubbleTwo>

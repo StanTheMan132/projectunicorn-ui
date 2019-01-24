@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import LockIcon from './Icons/lockIcon';
-import UserLoginIcon from './Icons/userLoginIcon';
+import LockIcon from "./Icons/lockIcon";
+import UserLoginIcon from "./Icons/userLoginIcon";
 
 class UserLogin extends Component {
   state = {
@@ -13,23 +13,18 @@ class UserLogin extends Component {
       <form className="login-form mt-4">
         <div className="form-group">
           <span className="form-inline">
-            <UserLoginIcon />
-            <input
-              type="text"
-              className="form-control"
-              id="username"
-              placeholder="username"
-            />
+            <input type="text" className="form-control form-input" />
+            <UserLoginIcon className="user-login-icon" />
+            <span className="floating-label" disabled>
+              Username
+            </span>
           </span>
           <span className="form-inline">
-            <LockIcon />
-            <input
-              type="text"
-              className="form-control"
-              id="password"
-              placeholder="password"
-            >
-            </input>
+            <input type="text" className="form-control form-input" />
+            <LockIcon className="user-login-icon" />
+            <span className="floating-label" disabled>
+              Password
+            </span>
           </span>
         </div>
       </form>

@@ -13,14 +13,22 @@ class UserLogin extends Component {
       <form className="login-form mt-4">
         <div className="form-group">
           <span className="form-inline">
-            <input type="text" className="form-control form-input" />
+            <input
+              type="text"
+              className="form-control form-input"
+              placeholder="username"
+            />
             <UserLoginIcon className="user-login-icon" />
             <span className="floating-label" disabled>
               Username
             </span>
           </span>
           <span className="form-inline">
-            <input type="text" className="form-control form-input" />
+            <input
+              type="text"
+              className="form-control form-input"
+              placeholder="password"
+            />
             <LockIcon className="user-login-icon" />
             <span className="floating-label" disabled>
               Password

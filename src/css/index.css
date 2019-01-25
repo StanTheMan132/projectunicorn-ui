@@ -11,10 +11,6 @@ a {
   outline: none !important;
 }
 
-signupButton a {
-  color: transparent !important;
-}
-
 input[type="button"]:hover,
 button:hover {
   background: rgba(255, 255, 255, 0.6);

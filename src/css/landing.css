@@ -3,7 +3,6 @@ landingContainer {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 2000px;
   width: 100%;
   overflow: hidden;
   color: rgb(248, 248, 252);
@@ -51,7 +50,7 @@ landingStats {
 }
 
 bubbleOne {
-  position: absolute;
+  position: fixed;
   background: rgba(255, 255, 255, 0.2);
   height: 200px;
   width: 400px;
@@ -84,7 +83,7 @@ bubbleThree svg {
   fill: rgba(255, 255, 255, 0.06);
 }
 
-andingNav {
+landingNav {
   display: flex;
   height: 60px;
   align-items: flex-end;
@@ -104,8 +103,8 @@ landingNav > navItems {
 slogan {
   display: flex;
   flex-direction: column;
-  margin-left: 28px;
-  margin-top: 15vh !important;
+  padding: 0 28px;
+  margin-top: 15vh;
   font-weight: 100;
   font-size: 40px;
   line-height: 60px;
@@ -121,8 +120,9 @@ slogan > span:nth-child(3) {
 }
 
 description {
-  margin-top: 60px;
-  margin-left: 28px !important;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
   line-height: 32px;
   font-size: 20px;
   font-weight: 250;
@@ -135,9 +135,12 @@ description p > span {
 signupButton {
   display: flex;
   justify-content: center;
+  z-index: 2000;
+  height: 42px;
 }
 
 signupButton input {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,41 +150,13 @@ signupButton input {
   font-size: 20px;
   width: 144px;
   height: 42px;
+  transform: translateX(-72px);
   border-radius: 8px;
   box-shadow: 3px 6px 12px 0 rgba(0, 0, 0, 0.16);
   background: rgba(255, 255, 255, 0.75);
   border-bottom: none;
   text-decoration: none;
-}
-
-loginButton {
-  display: flex;
-  justify-content: center;
-}
-
-loginButton input {
-  border: none;
-  color: rgb(248, 248, 252);
-  font-weight: 600;
-  font-size: 20px;
-  width: 144px;
-  height: 42px;
-  border-radius: 8px;
-  box-shadow: 3px 6px 12px 0px rgba(0, 0, 0, 0.16);
-  background: rgb(194, 119, 186);
   z-index: 2000;
-}
-
-loginButton a {
-  text-decoration: none !important;
-}
-
-loginButton input:hover {
-  background: rgba(194, 119, 186, 0.6) !important;
-}
-
-loginButton input:active {
-  background: rgba(194, 119, 186, 0.4) !important;
 }
 
 @media screen and (min-width: 576px) {
@@ -211,24 +186,18 @@ loginButton input:active {
 }
 
 @media screen and (min-width: 920px) {
-  mainLanding > * {
-    margin-top: 10vh;
+  description {
+    height: 184px;
+    font-size: 24px;
+    justify-content: center;
   }
 
   slogan {
     text-align: center;
-    margin-top: 20vh !important;
+    margin-top: 100px;
   }
 
-  .slogan-desktop {
-    display: block;
-  }
-
-  .slogan-mobile {
-    display: none;
-  }
-
-  .slogan-desktop span:nth-child(2) {
+  .slogan-mobile span:nth-child(3) {
     font-weight: 550;
     text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.68);
     display: block;
@@ -236,7 +205,6 @@ loginButton input:active {
 
   description p {
     text-align: center;
-    margin-top: -50px;
-    margin-left: 25px;
+    margin-top: 0px;
   }
 }

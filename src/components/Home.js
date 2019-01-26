@@ -1,10 +1,19 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import UserProfile from "./UserProfile";
-import UserLogin from "./UserLogin";
+import UserProfile from './UserProfile';
+import UserLogin from './UserLogin';
+import MultiMemberIcon from './Icons/multiMemberIcon';
+import ProjectsIcon from './Icons/projectsIcon';
+import CommitsIcon from './Icons/commitsIcon';
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      signupClicked: false
+    };
+  }
   render() {
     let landingContent;
 
@@ -27,9 +36,9 @@ class Home extends Component {
         <div className="landing-content">
           <description>
             <p>
-              <span>Project Unicorn</span> is an online community focused on{" "}
+              <span>Project Unicorn</span> is an online community focused on{' '}
               <br />
-              collaborative learning by building <br /> and shipping{" "}
+              collaborative learning by building <br /> and shipping{' '}
               <span> meaningful</span> software.
             </p>
           </description>
@@ -44,6 +53,7 @@ class Home extends Component {
 
     return (
       <landingContainer>
+        <vertical />
         <mainLanding>
           <slogan className="slogan-mobile">
             <span>build</span>
@@ -58,20 +68,22 @@ class Home extends Component {
           {landingContent}
         </mainLanding>
         <landingStats>
-          <div className="stat">
-            <i className="fa fa-users fa-3x" />
-            <span className="stat-number">87</span>
-            <span>users</span>
-          </div>
-          <div className="stat">
-            <i className="fa fa-project-diagram fa-3x" />
-            <span className="stat-number">9</span>
-            <span>projects</span>
-          </div>
-          <div className="stat">
-            <i className="fa fa-code-branch fa-3x" />
-            <span className="stat-number">23</span>
-            <span>commits</span>
+          <div className="stat-container">
+            <div className="stat">
+              <MultiMemberIcon />
+              <span className="stat-number">87</span>
+              <span className="stat-parameter">users</span>
+            </div>
+            <div className="stat">
+              <ProjectsIcon />
+              <span className="stat-number">9</span>
+              <span className="stat-parameter">projects</span>
+            </div>
+            <div className="stat">
+              <CommitsIcon />
+              <span className="stat-number">23</span>
+              <span className="stat-parameter">commits</span>
+            </div>
           </div>
         </landingStats>
         <bubbleOne />

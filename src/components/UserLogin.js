@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import LockIcon from "./Icons/lockIcon";
-import UserLoginIcon from "./Icons/userLoginIcon";
+import React, { Component } from 'react';
+import LockIcon from './Icons/lockIcon';
+import UserLoginIcon from './Icons/userLoginIcon';
 
 class UserLogin extends Component {
   state = {
@@ -25,7 +25,8 @@ class UserLogin extends Component {
           </span>
           <span className="form-inline">
             <input
-              type="text"
+              type="password"
+              minLength={8}
               className="form-control form-input"
               placeholder="password"
             />

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import UserProfile from './UserProfile';
 import UserLogin from './UserLogin';
+import UserSignup from './userSignup';
 import MultiMemberIcon from './Icons/multiMemberIcon';
 import ProjectsIcon from './Icons/projectsIcon';
 import CommitsIcon from './Icons/commitsIcon';
@@ -13,9 +14,18 @@ class Home extends Component {
     this.state = {
       signupClicked: false
     };
+    this.handleSignupClick = this.handleSignupClick.bind(this);
   }
+
+  handleSignupClick() {
+    this.setState({
+      signupClicked: true
+    });
+  }
+
   render() {
     let landingContent;
+    const { signupClicked } = this.state;
 
     // Send the user directly to their profile if they are logged in
     if (this.props.isAuthenticated) {
@@ -31,7 +41,7 @@ class Home extends Component {
           </loginButton>
         </div>
       );
-    } else {
+    } else if (!signupClicked) {
       landingContent = (
         <div className="landing-content">
           <description>
@@ -43,12 +53,16 @@ class Home extends Component {
             </p>
           </description>
           <signupButton>
-            <Link to="/signup">
-              <input type="button" value="Sign Up" />
-            </Link>
+            <input
+              type="button"
+              value="Sign Up"
+              onClick={this.handleSignupClick}
+            />
           </signupButton>
         </div>
       );
+    } else {
+      landingContent = <UserSignup />;
     }
 
     return (

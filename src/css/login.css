@@ -1,4 +1,5 @@
-.login-form {
+.login-form,
+.signup-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +7,8 @@
   z-index: 2000;
 }
 
-.login-form .form-group {
+.login-form .form-group,
+.signup-form .form-group {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +20,12 @@
   border-radius: 60px;
 }
 
-.login-form .form-group > * {
+.signup-form .form-group {
+  height: 200px;
+}
+
+.login-form .form-group > *,
+.signup-form .form-group > * {
   display: flex;
   align-items: center;
   margin-top: -5px;
@@ -93,7 +100,8 @@
   top: 40px;
 }
 
-.login-form .form-input {
+.login-form .form-input,
+.signup-form .form-input {
   background: transparent;
   padding-left: 30px;
   padding-bottom: 16px;
@@ -155,7 +163,8 @@ loginButton input:active {
 }
 
 @media screen and (min-width: 920px) {
-  .login-form .form-group {
+  .login-form .form-group,
+  .signup-form .form-group {
     width: 400px;
     margin-top: 32px;
   }

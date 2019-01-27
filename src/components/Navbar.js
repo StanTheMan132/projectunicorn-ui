@@ -30,7 +30,7 @@ class Navbar extends Component {
     if (!isHome) {
       navClassNames += ' nav-not-home';
     } else {
-      navClassNames = 'navbar navbar-expand-lg navbar-dark fixed-top';
+      navClassNames = 'navbar navbar-dark fixed-top';
     }
 
     return (

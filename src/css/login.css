@@ -41,15 +41,15 @@
 .user-login-icon {
   position: absolute;
   left: -20px;
-  top: 50px;
-  transition: 0.2s;
+  top: 36px;
+  transition: 0.3s;
 }
 
 .floating-label {
   position: absolute;
   left: 10px;
   top: 36px;
-  transition: 0.2s;
+  transition: 0.3s;
   z-index: -1;
   color: lightgray;
   opacity: 0;
@@ -87,15 +87,10 @@
   opacity: 1;
 }
 
-.form-input:focus + .user-login-icon {
-  top: 45px;
-}
-
 .form-input:focus + .user-login-icon + span {
   display: block !important;
   font-size: 10px;
-  top: 36px;
-  left: 5px;
+  top: 16px;
   opacity: 1;
 }
 

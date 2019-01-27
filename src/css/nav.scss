@@ -1,10 +1,17 @@
-$navHeight: 70px;
+$navHeight: 86px;
 
 nav {
   display: flex;
   height: $navHeight;
   align-items: center;
   position: relative;
+}
+
+.collapsing {
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
+  min-width: 100vw !important;
+  transform: translate(-16px);
 }
 
 nav li a {
@@ -20,13 +27,14 @@ nav li a {
   position: relative;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .navbar-menu-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  width: 120px;
+  width: 140px;
 }
 
 .navbar-brand {
@@ -35,22 +43,24 @@ nav li a {
 
 navItems {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   top: 0;
-  right: 0;
   display: flex;
   flex-direction: column;
   font-size: 20px;
   font-weight: 100;
   align-items: center;
-  color: rgb(248, 248, 252);
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(97, 97, 127, 0.8);
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 1px 2px 0 rgb(200, 200, 200);
 }
 
 navItems li {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: calc(100% + 56px);
+  color: rgb(248, 248, 252);
   border-bottom: 1px solid rgb(248, 248, 252);
 }
 
@@ -59,12 +69,17 @@ navItems li:hover {
   color: rgb(74, 89, 90);
 }
 
+.nav-link {
+  color: rgb(248, 248, 252) !important;
+}
+
 navPrompt {
   display: flex;
   font-size: 20px;
   font-weight: 100;
   color: rgb(248, 248, 252);
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .navbar-toggler:focus {
@@ -74,10 +89,6 @@ navPrompt {
 .nav-not-home {
   background: linear-gradient(45deg, #ec6ead, #3494e6);
   height: $navHeight;
-}
-
-loginPrompt {
-  margin-top: 5px;
 }
 
 .user-profile-nav-item {
@@ -126,10 +137,6 @@ loginPrompt {
 }
 
 @media screen and (max-width: 991px) {
-  .navbar > * {
-    margin-top: -8px;
-  }
-
   .user-profile-nav-item > * {
     display: block;
   }

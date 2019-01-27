@@ -171,6 +171,49 @@ signupButton input {
   z-index: 2000;
 }
 
+.featured-projects-container {
+  background: rgb(248, 248, 252);
+  width: calc(100% - 28px);
+  height: 220px;
+  margin-top: 40px;
+  border-radius: 24px;
+  box-shadow: 8px 16px 12px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+}
+
+.featured-project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 40px;
+  flex: 1;
+  height: 100%;
+  margin-right: 12px;
+}
+
+.featured-project-backing {
+  background: #1592e6;
+  height: 110px;
+  width: 126px;
+}
+
+.featured-project-title {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #838a92;
+}
+
+.featured-project-image {
+  position: absolute;
+  height: 110px;
+  width: 126px;
+  border: 4px solid rgb(248, 248, 252);
+  transform: translate(-20px, 20px);
+}
+
 @media screen and (min-width: 576px) {
   .stat:nth-child(1) {
     right: 200px;

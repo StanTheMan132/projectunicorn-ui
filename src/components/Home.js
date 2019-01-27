@@ -67,7 +67,6 @@ class Home extends Component {
 
     return (
       <landingContainer>
-        <vertical />
         <mainLanding>
           <slogan className="slogan-mobile">
             <span>build</span>
@@ -104,6 +103,26 @@ class Home extends Component {
               <CommitsIcon />
               <span className="stat-number">23</span>
               <span className="stat-parameter">commits</span>
+            </div>
+          </div>
+          <div className="featured-projects-container">
+            <div className="featured-project">
+              <img
+                className="featured-project-image"
+                src="https://www.bluecompass.com/filesimages/home/BC-thumbnail.jpg"
+                style={{ height: '110px', width: '126px' }}
+              />
+              <div className="featured-project-backing" />
+              <span className="featured-project-title">Generic Project</span>
+            </div>
+            <div className="featured-project">
+              <img
+                className="featured-project-image"
+                src="https://www.bluecompass.com/filesimages/home/BC-thumbnail.jpg"
+                style={{ height: '110px', width: '126px' }}
+              />
+              <div className="featured-project-backing" />
+              <span className="featured-project-title">Generic Project</span>
             </div>
           </div>
         </landingStats>

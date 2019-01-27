@@ -8,7 +8,7 @@ import Projects from './components/Projects';
 class App extends Component {
   state = {
     loginClicked: false,
-    isAuthenticated: true
+    isAuthenticated: false
   };
 
   handleLoginClick = () => {

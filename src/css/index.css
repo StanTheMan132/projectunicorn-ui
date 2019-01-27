@@ -7,13 +7,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-vertical {
-  border-left: 1px dotted white;
-  height: 100vh;
-  position: absolute;
-  left: 50%;
-}
-
 a {
   outline: none !important;
 }
@@ -36,6 +29,7 @@ button:active {
   align-self: center;
   flex-direction: column; */
   background-color: rgb(240, 240, 240);
+  min-height: 600px;
   margin-top: 70px;
   padding: 40px;
   color: #666;

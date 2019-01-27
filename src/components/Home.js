@@ -89,9 +89,16 @@ class Home extends Component {
               <span className="stat-parameter">users</span>
             </div>
             <div className="stat">
-              <ProjectsIcon />
-              <span className="stat-number">9</span>
-              <span className="stat-parameter">projects</span>
+              <Link to="/projects">
+                <ProjectsIcon />
+              </Link>
+
+              <Link to="/projects">
+                <span className="stat-number">9</span>
+              </Link>
+              <Link to="/projects">
+                <span className="stat-parameter">projects</span>
+              </Link>
             </div>
             <div className="stat">
               <CommitsIcon />

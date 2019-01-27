@@ -28,3 +28,24 @@ button:active {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16) inset;
 }
+
+.page {
+  /* display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  flex-direction: column; */
+  background-color: rgb(240, 240, 240);
+  margin-top: 70px;
+  padding: 40px;
+  color: #666;
+}
+
+::selection {
+  background-color: #3494e6;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none !important;
+}

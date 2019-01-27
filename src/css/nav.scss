@@ -1,11 +1,8 @@
-li {
-  background: black !important;
-  color: green !important;
-}
+$navHeight: 70px;
 
 nav {
   display: flex;
-  height: 86px;
+  height: $navHeight;
   align-items: center;
   position: relative;
 }
@@ -39,7 +36,7 @@ nav li a {
 navItems {
   position: absolute;
   width: 100%;
-  top: 0px;
+  top: 0;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -74,6 +71,35 @@ navPrompt {
   outline: none;
 }
 
+.nav-not-home {
+  background: linear-gradient(45deg, #ec6ead, #3494e6);
+  height: $navHeight;
+}
+
+loginPrompt {
+  margin-top: 5px;
+}
+
+.user-profile-nav-item {
+  margin-left: 8vw;
+}
+
+.user-profile-nav-item > * {
+  display: inline;
+}
+
+.user-profile-nav-item .username {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #206096;
+}
+
+.user-profile-nav-item .username:hover {
+  color: #266fad;
+}
+
 @media screen and (min-width: 920px) {
   navItems {
     flex-direction: row;
@@ -96,5 +122,29 @@ navPrompt {
   navPrompt {
     position: absolute;
     right: 100px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar > * {
+    margin-top: -8px;
+  }
+
+  .user-profile-nav-item > * {
+    display: block;
+  }
+
+  .user-profile-nav-item .user-icon {
+    display: none;
+  }
+
+  .search-box {
+    // margin-left: -10%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .user-profile-nav-item .username {
+    display: none;
   }
 }

@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './css/index.css';
 import './css/nav.scss';
 import './css/landing.css';
 import './css/login.css';
 import './css/forms.css';
+import './css/secondaryNavbar.scss';
+import './css/projects.css';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

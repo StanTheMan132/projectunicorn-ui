@@ -41,7 +41,7 @@
 .user-login-icon {
   position: absolute;
   left: -20px;
-  top: 36px;
+  top: 50px;
   transition: 0.2s;
 }
 
@@ -87,10 +87,15 @@
   opacity: 1;
 }
 
+.form-input:focus + .user-login-icon {
+  top: 45px;
+}
+
 .form-input:focus + .user-login-icon + span {
   display: block !important;
   font-size: 10px;
-  top: 20px;
+  top: 36px;
+  left: 5px;
   opacity: 1;
 }
 

@@ -1,0 +1,67 @@
+.projects {
+  display: flex;
+  align-items: center;
+  /* align-content: center; */
+  /* justify-content: center; */
+  align-self: center;
+}
+
+.my-projects {
+  text-decoration: underline;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.project-card {
+  width: 250px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 0 0 8px gray;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.create-project {
+  /* display: flex;
+  align-items: center;
+  flex-direction: column; */
+  margin-top: 20px;
+}
+
+.create-project-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  transform: scale(3);
+  padding: 5px;
+  color: gray;
+  border: 1px solid lightgray;
+  border-radius: 200px;
+}
+
+.create-project-icon:hover {
+  color: rgb(100, 100, 100);
+  text-decoration: none !important;
+}
+
+.project-title {
+  margin-top: 20px !important;
+  color: gray;
+  font-weight: bold;
+}
+
+.project-title:hover {
+  text-decoration: none !important;
+}
+
+.create-project-link {
+  text-decoration: none !important;
+}
+
+.project-avatar {
+  position: relative;
+  top: -90px;
+  left: -10px;
+}

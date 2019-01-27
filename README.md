@@ -41,6 +41,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 Runs eslint on all JS files under the src directory
 
+
+### `yarn run lint-fix`
+
+Runs eslint --fix on all JS files under the src directory
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
